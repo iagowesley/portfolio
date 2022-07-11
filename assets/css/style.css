@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Quicksand:wght@500&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #ac63ff;
+    font-family: 'Didact Gothic', sans-serif;
+    
+}
+
+.caixas {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.caixa1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #0042ff;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.caixa1 .name {
+    font-size: 75px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffff00;
+}
+
+.caixa1 .sub {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    gap: 30px;
+}
+
+.btns button {
+    background-color: #0032c2;
+    padding: 10px;
+    border: 3px solid #ffff00;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffff00;
+    box-shadow: 8px 8px #0032c2;
+    cursor: pointer;
+    transition-timing-function: ease-in-out;
+
+}
+
+.btns button:hover {
+    color: white;
+    border-color: white;
+    background-color: #002899;
+    box-shadow: none;
+    transition: .2s;
+    transform: rotate(2deg) scale(110%);
+}
+
+.caixa2 {
+    background-color: #ffd117;
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa2 h3 {
+    font-size: 40px;
+    text-decoration: underline;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.caixa3 h4 {
+    font-size: 40px;
+    text-decoration: underline;
+}
+/* Cards */
+
+
+
+.caixa-branca {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tudo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.linha {
+    gap: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 300px;
+    border: 3px solid white;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.img-last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 300px;
+    border: 3px solid white;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+@media (max-width:1200px) {
+    .img {
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+.caixa-white {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.caixa-white:hover {
+    transform: scale(107%);
+    transition: 0.4s;
+
+}
+
+.caixa-white-last {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.caixa-white-last:hover {
+    transform: scale(107%);
+    transition: 0.4s;
+
+}
+
+.img:hover {
+    transform:scale(107%);
+    transition: 0.4s ease-out ;
+    opacity: 90%;
+}
+
+
+.wesley {
+    text-decoration:  underline 6px;
+}
+
+
+  #text:after{
+   content: '';
+    display: inline-block;
+    background-color: white;
+    margin-left: 7px;
+    height: 45px;
+    width: 8px;
+    animation: cursor 0.5s infinite;
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes cursor {
+    0% { opacity: 1; }
+      49% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
+  }
+
+  .caixa3  {
+        color: white;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        border: 10px solid black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+  }
+
+  .caixa3 h4 {
+      margin-top: 100px;
+      margin-bottom: 20px;
+  }
+
+ .contatos {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     margin-top: 50px;
+     margin-bottom: 160px;
+ }
+
+
+
+ .card-insta,
+ .card-email,
+ .card-linkedin {
+     padding: 35px;
+     width: 250px;
+     cursor: pointer;
+     border: 3px solid white;
+     margin: 0 auto;
+     margin-bottom: 40px;
+ }
+
+ .card-insta:hover,
+ .card-email:hover,
+ .card-linkedin:hover {
+     padding: 35px;
+     border-radius: 5px;
+     transform: scale(107%);
+
+     width: 250px;
+     transition: 0.8s;
+     opacity: 100%;
+ }
+
+ a {
+     text-decoration: none;
+     color: white;
+ }
+
+ a:hover {
+     color: white;
+ }
+ .card-insta p,
+ .card-email p,
+ .card-linkedin p {
+     margin-top: 20px;
+ }
