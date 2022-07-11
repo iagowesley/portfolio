@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Source+Code+Pro:wght@200&display=swap');
 
 body {
     display: flex;
     justify-content: center;
-    background-color: #ac63ff;
-    font-family: 'Didact Gothic', sans-serif;
-    
+    font-family: 'Source Code Pro', monospace;    
 }
 
 .caixas {
@@ -46,6 +44,7 @@ body {
 }
 
 .btns button {
+    height: 55px;
     background-color: #0032c2;
     padding: 10px;
     border: 3px solid #ffff00;
@@ -78,17 +77,14 @@ body {
 
 .caixa2 h3 {
     font-size: 40px;
-    text-decoration: underline;
     margin-top: 90px;
     margin-bottom: 50px;
 }
 
 .caixa3 h4 {
     font-size: 40px;
-    text-decoration: underline;
 }
 /* Cards */
-
 
 
 .caixa-branca {
@@ -174,7 +170,8 @@ body {
 
 }
 
-.img:hover {
+.img:hover,
+.img-last:hover {
     transform:scale(107%);
     transition: 0.4s ease-out ;
     opacity: 90%;
@@ -228,6 +225,7 @@ body {
      align-items: center;
      margin-top: 50px;
      margin-bottom: 160px;
+     margin-top: 150px;
  }
 
 
@@ -236,7 +234,7 @@ body {
  .card-email,
  .card-linkedin {
      padding: 35px;
-     width: 250px;
+     width: 290px;
      cursor: pointer;
      border: 3px solid white;
      margin: 0 auto;
@@ -250,7 +248,7 @@ body {
      border-radius: 5px;
      transform: scale(107%);
 
-     width: 250px;
+     width: 290px;
      transition: 0.8s;
      opacity: 100%;
  }
