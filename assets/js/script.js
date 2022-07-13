@@ -1,9 +1,25 @@
-$('.nav a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
-	}, 500);
+const menuLinks = document.querySelectorAll('.btns a[href^="#"]');	
+
+
+
+function getDistanceFromTheTop(element) {
+	const id = element.getAttribute('href');
+	return document.querySelector(id).offsetTop;
+}
+
+function nativeScroll(distanceFromTheTop) {
+	window.scroll({
+		top: distanceFromTheTop,
+		behavior: 'smooth'
+	});
+}
+
+function scrollToSection(event) {
+	event.preventDefault();
+	const distanceFromTheTop = getDistanceFromTheTop(event.target) - 90;
+	nativeScroll(distanceFromTheTop);
+}
+
+menuLinks.forEach((link) => {
+	link.addEventListener("click", scrollToSection);
 });
