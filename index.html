@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
         var i = 0;
         // var A = 0;
@@ -35,6 +38,9 @@
                 scrollTop: targetOffset - 100
             }, 500);
         });
+
+        AOS.init();
+
     </script>
     <title>ClonePort</title>
 </head>
@@ -43,32 +49,48 @@
         <div class="caixa1">
             <img src="./assets/img/perfil.png" class="img-responsive" width="250px" alt="">
 
-            <span class="name text-center">iago <span id="text">wesley</span></span>
-            <span class="sub">front-end developer</span>
+            <!-- <span class="name text-center">iago <span id="text">wesley</span></span> -->
+
+            <p class="line typing-animation mt-3 fw-bold">Olá, eu sou <span class="text-white">Iago Wesley</span>.</p>
+
+            <span class="sub fw-bold">// front-end developer</span>
             <div class="row btns text-center mb-5">
                 <div class="col-12 col-md-4 col-xl-3">
-                    <a href="#caixa3"><button class="contato">contact me</button></a>
+                    <a href="#caixa3"><button class="contato"> contato</button></a>
                 </div>
                 <div class="col-12 col-md-4 col-xl-3">
-                    <button class="conheca">about me</button>
+                    <a href="#about"><button class="conheca"> sobre mim</button></a>
                 </div>
                 <div class="col-12 col-md-4 col-xl-3">
-                    <a href="https://github.com/iagowesley"><button class="git"><img src="assets/img/github.png" width="30px" alt=""> github</button></a>
+                    <a href="https://github.com/iagowesley"><button class="github"><img src="assets/img/github.png" width="30px" alt=""> repositórios</button></a>
                 </div>
             </div>
         </div>
-        <div class="caixa2">
-            <h3 class="text-center text-white">works developed</h3>
-            <div class="tudo mt-5">
-                <div class="row linha">
-                    <div class="col-12 col-md-6 col-xl-5 ">
-                        <div class="img">
-                            <div class="caixa-white">
+        <div class="caixa2 mt-1"  id="about">
+            <h3 class="text-center text-white fw-bold">sobre mim</h3>
+            <div class="container text-white fw-bold" >
+                <p class="text-start text-md-center text-xl-center">22 anos, graduando em Engenharia de software pela Universidade Federal do Ceará.
+                    Atuando como Desenvolvedor Front-end e analista de qualidade trainee.
+                    Possuo conhecimentos em: HTML5, CSS3, JavaScript, ReactJs, Bootstrap, Git, Github, Wordpress e SCRUM. Busco futuramente me tornar um desenvolvedor front-end sênior.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="caixa2  mt-1 bg-success">
+            
+            
+            <h3 class="text-center text-white fw-bold">Trabalhos desenvolvidos</h3>
+            <div class="tudo mt-5" >
+                <div class="row linha" >
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-5 " >
+                        <div class="img" >
+                            <div class="caixa-white" >
                                 <a href="https://okintercambio.com.br/"><img src="https://raw.githubusercontent.com/MarcioJnr/OkInter/main/assets/icons/logo.svg" width="100%" alt="OK"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-5">
+                    <div class="col-12 col-sm-6 col-md-6 col-xl-5">
                         <div class="img-last">
                             <div class="caixa-white-last">
                                 <img src="https://raw.githubusercontent.com/codijr/Fasjus/main/assets/icons/logo.svg" width="100%" alt="FASJUS">
@@ -79,11 +101,63 @@
             </div>
             
         </div>
-        <div class="caixa3 bg-dark" id="caixa3">
+
+        <div class="caixa-habilidades  mt-1" id="about">
             
-            <div class="row contatos">
+            <h3 class="text-center text-white fw-bold">Habilidades</h3>
+            <div class="tudo mt-5 text-white fw-bold" >
+                <div class="row linha gap-0" >
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-4" >
+                        <div class="html">
+                            <img src="./assets/img/html.svg" alt="">
+                            <p>HTML5</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-4">
+                        <div class="css">
+                            <img src="./assets/img/css.svg" alt="">
+                            <p>CSS3</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-4 " >
+                        <div class="javascript">
+                            <img src="./assets/img/javascript.svg" alt="">
+                            <p>Javascript</p>
+
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-4">
+                        <div class="bootstrap">
+                            <img src="./assets/img/bootstrap.svg" alt="">
+                            <p>Bootstrap</p>
+
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-4 " >
+                        <div class="react">
+                            <img src="./assets/img/react.svg" alt="">
+                            <p>ReactJs</p>
+
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-3 col-xl-4">
+                        <div class="git">
+                            <img src="./assets/img/git.svg" alt="">
+                            <p>Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="caixa3  mt-1 fw-bold bg-dark" id="caixa3">
+        <h3 class="text-center text-white fw-bold">Contatos</h3>
+
+            <div class="row contatos" >
                 <div class="col-12 col-sm-12 col-md-6 col-xl-4">
-                    <div class="card-insta">
+                    <div class="card-insta" >
                         <a href="instagram.com"><img src="./assets/img/instagram (1).png" alt="">
                         <p>INSTAGRAM</p>
                         <p>@iagowesleey</p></a>
@@ -108,6 +182,17 @@
 
            
 
+        </div>
+
+        <div class="caixa5">
+            <div class="footer">
+                <div class="nome">
+                    <p class="text-white mt-3 fw-bold text-center">&copy; Iago Wesley 2022</p>
+                </div>
+                <div class="numero">
+                    <p class=" text-center text-white mt-3 fw-bold">(88) 981879814</p>
+                </div>
+            </div>
         </div>
     </div>
     

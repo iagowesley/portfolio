@@ -9,7 +9,7 @@ body {
 .caixas {
     height: 100%;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,8 +40,15 @@ body {
 
 .btns {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .github img {
+        display: none;
+    }
+    
 }
 
 .btns button {
@@ -56,6 +63,12 @@ body {
     box-shadow: 8px 8px #0032c2;
     cursor: pointer;
     transition: transform 0.6s;
+}
+
+.btns .github {
+    width: 200px;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .btns button:hover {
@@ -81,6 +94,26 @@ body {
     margin-bottom: 50px;
 }
 
+.caixa-habilidades {
+    background-color: #012030;
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-habilidades h3 {
+    font-size: 40px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.caixa3 h3 {
+    font-size: 40px;
+    margin-top: 90px;
+}
+
 .caixa3 h4 {
     font-size: 40px;
 }
@@ -88,7 +121,7 @@ body {
 
 @media (max-width: 768px) {
     .img-responsive {
-        width: 150px;
+        width: 170px;
     }  
 }
 
@@ -106,6 +139,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
 .linha {
     gap: 100px;
@@ -234,12 +268,25 @@ body {
      flex-direction: row;
      justify-content: center;
      align-items: center;
-     margin-top: 50px;
      margin-bottom: 160px;
-     margin-top: 150px;
+     margin-top: 80px;
  }
 
+ .caixa5 {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    background-color: #0042ff;
+    border: 10px solid black;
+    
+}
 
+
+
+.ultima-caixa {
+    background-color: #012030;
+    
+}
 
  .card-insta,
  .card-email,
@@ -251,15 +298,14 @@ body {
      margin: 0 auto;
      margin-bottom: 40px;
      transition: transform 0.4s;
-
+    
  }
 
  .card-insta:hover,
  .card-email:hover,
  .card-linkedin:hover {
      padding: 35px;
-     border-radius: 5px;
-     transform: scale(107%);
+     transform: rotate(2deg) scale(103%);
      width: 290px;
      opacity: 100%;
  }
@@ -277,3 +323,89 @@ body {
  .card-linkedin p {
      margin-top: 20px;
  }
+
+ .line {
+    color: #ffff00;
+    font-size: 50px;
+    border-right: 3px solid #ffff00;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    
+ }
+
+.typing-animation {
+    animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 15em;
+    }
+}
+
+ @keyframes blinkCursor{
+     from {
+         border-right-color: #ffff00;
+     }
+     to {
+            border-right-color: transparent;
+     }
+ }
+
+ @media (max-width: 1200px) {
+     .line {
+        font-size: 20px;
+        margin-top: 100px;
+        transition: 2s;
+    }
+ }
+
+ .container {
+     font-size: 22px;
+     display: flex;
+     text-align: center;
+     max-width: 900px;
+     margin-bottom: 150px;
+ }
+
+ /* habilidades cards */
+
+ .html,
+ .css,
+ .javascript,
+ .bootstrap,
+ .react,
+ .git {
+    text-align: center;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    flex-direction: column;
+    transition: 0.4s ease-out ;
+    cursor: pointer;
+ }
+
+ .html:hover,
+ .css:hover,
+ .javascript:hover,
+ .bootstrap:hover,
+ .react:hover,
+ .git:hover {
+    transform: rotate(-2deg) scale(110%);
+    opacity: 100%;
+ }
+
+
+ .footer {
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+ 
