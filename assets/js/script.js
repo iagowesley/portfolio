@@ -1,4 +1,4 @@
-const menuLinks = document.querySelectorAll('.btns a[href^="#"]');	
+/* const menuLinks = document.querySelectorAll('.btns a[href^="#"]');	
 
 
 
@@ -22,4 +22,15 @@ function scrollToSection(event) {
 
 menuLinks.forEach((link) => {
 	link.addEventListener("click", scrollToSection);
-});
+}); */
+
+const observer = new IntersectionObserver(entries => {
+	console.log(entries)
+	entries[0].target.classList.add(".init-hidden-off")
+}, {
+	threshold: 1
+})
+
+Array.from(document.querySelectorAll(".caixa-habilidades")).forEach(element => {
+	observer.observe(element)
+})
