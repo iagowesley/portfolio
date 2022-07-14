@@ -407,10 +407,17 @@ body {
 
  .curriculo {
      border: white solid 3px;
+     color: #ffffff;
+     background-color: #e7ba07;
      padding: 10px;
      display: flex;
      justify-content: center;
      align-items: center;
+     transition: 0.4s;
+ }
+
+ .curriculo:hover {
+        transform: scale(103%);
  }
 
  @media (min-width:677px) {
