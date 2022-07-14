@@ -410,6 +410,21 @@ body {
  .curriculo {
      border: white solid 3px;
      padding: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ @media (min-width:677px) {
+    .curriculo {
+        border: white solid 3px;
+        padding: 10px;
+        width: 40%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
  }
 
 
