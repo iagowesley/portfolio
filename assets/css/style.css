@@ -160,6 +160,8 @@ body {
     margin: 0 auto;
     margin-bottom: 200px;
     transition: transform 0.4s;
+    box-shadow: 7px 7px #107144;
+
 }
 
 .lab {
@@ -179,6 +181,8 @@ body {
     margin: 0 auto;
     margin-bottom: 200px;
     transition: transform 0.4s;
+    box-shadow: 7px 7px #107144;
+
 }
 
 .img-last-3 {
@@ -193,6 +197,8 @@ body {
     margin: 0 auto;
     margin-bottom: 200px;
     transition: transform 0.4s;
+    box-shadow: 7px 7px #107144;
+
 }
 
 @media (max-width:1200px) {
@@ -253,6 +259,7 @@ body {
     transform:scale(107%);
     transition: 0.4s ease-out ;
     opacity: 90%;
+    box-shadow: none;
 }
 
 
@@ -331,7 +338,7 @@ body {
      margin: 0 auto;
      margin-bottom: 40px;
      transition: transform 0.4s;
-    
+    box-shadow: 7px 7px  rgb(61, 61, 61);
  }
 
  .card-insta:hover,
@@ -341,6 +348,7 @@ body {
      transform: rotate(2deg) scale(103%);
      width: 290px;
      opacity: 100%;
+     box-shadow: none;
  }
 
  a {
@@ -487,3 +495,13 @@ body {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
  }
+
+ .container a {
+    box-shadow: 8px 8px #c8a20d;
+ }
+
+ .container a:hover {
+    box-shadow: none;
+    transform: rotate(1deg) scale(102%);
+ }
+
