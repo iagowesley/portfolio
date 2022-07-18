@@ -44,12 +44,6 @@ body {
     gap: 30px;
 }
 
-@media (max-width: 600px) {
-    .github img {
-        display: none;
-    }
-    
-}
 
 .btns button {
     height: 55px;
@@ -66,7 +60,7 @@ body {
 }
 
 .btns .github {
-    width: 200px;
+    width: 140px;
     flex-direction: row;
     gap: 10px;
 }
@@ -145,7 +139,6 @@ body {
     gap: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .img {
@@ -179,7 +172,7 @@ body {
     padding: 15px;
     cursor: pointer;
     margin: 0 auto;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     transition: transform 0.4s;
     box-shadow: 7px 7px #107144;
 
