@@ -211,7 +211,7 @@ body {
     width: 100%;
     height: 100%;
     transition: transform 0.4s;
-    
+    flex-direction: column;
 }
 .caixa-white:hover {
     transform: scale(107%);
@@ -226,6 +226,8 @@ body {
     width: 100%;
     height: 100%;
     transition: transform 0.4s;
+    flex-direction: column;
+
 }
 .caixa-white-last:hover {
     transform: scale(107%);
@@ -240,6 +242,8 @@ body {
     width: 100%;
     height: 100%;
     transition: transform 0.4s;
+    flex-direction: column;
+
 }
 .caixa-white-3:hover {
     transform: scale(107%);
@@ -498,3 +502,22 @@ body {
     transform: rotate(1deg) scale(102%);
  }
 
+.btn-acessar {
+    background-color: white;
+    color: #107144;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+    border: 1px solid white;
+}
+
+.btn-acessar:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: #107144;
+    border-bottom: 1px solid #107144;
+}
