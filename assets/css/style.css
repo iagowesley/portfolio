@@ -3,7 +3,9 @@
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Source Code Pro', monospace;    
+    font-family: 'Source Code Pro', monospace;  
+    scroll-behavior: smooth;
+  
 }
 
 .caixas {
@@ -520,4 +522,27 @@ body {
     background-color: white;
     color: #107144;
     border-bottom: 1px solid #107144;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    text-decoration: none;
+}
+.btn::after {
+    content: "↑";
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    transition: margin-top 250ms;
+}
+.btn:hover::after {
+    margin-top:-8px;
 }
