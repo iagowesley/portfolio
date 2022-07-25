@@ -78,3 +78,75 @@ $(document).ready(function () {
 	  $("html, body").animate({scrollTop: 0}, 800);
 	 });
   });
+
+  const resultBtn = document.querySelector('.resultBtn');
+const output = document.querySelector('.output-code');
+
+resultBtn.style.backgroundPosition = `top left,top center,top right,center right, bottom right,bottom center,bottom left,center left`;
+resultBtn.style.backgroundRepeat = "no-repeat";
+
+drawBtn();
+
+function drawBtn() {
+    const width = Number(document.querySelector('[name="width"]').value);
+    const radius = Number(document.querySelector('[name="radius"]').value);
+
+    const color = [
+        document.querySelector('[name="colorA"]').value,
+        document.querySelector('[name="colorB"]').value,
+        document.querySelector('[name="colorC"]').value,
+        document.querySelector('[name="colorD"]').value
+    ]
+
+    resultBtn.style.backgroundImage = `
+        radial-gradient(circle at 100% 100%, transparent ${radius - width}px, ${color[0]} ${radius - width}px, ${color[0]} ${radius}px, transparent ${radius}px),
+        linear-gradient(to right, ${color[0]}, ${color[1]}),
+        radial-gradient(circle at 0% 100%, transparent ${radius - width}px, ${color[1]} ${radius - width}px, ${color[1]} ${radius}px, transparent ${radius}px),
+        linear-gradient(to bottom, ${color[1]}, ${color[2]}),
+        radial-gradient(circle at 0% 0%, transparent ${radius - width}px, ${color[2]} ${radius - width}px, ${color[2]} ${radius}px, transparent ${radius}px),
+        linear-gradient(to left, ${color[2]}, ${color[3]}),
+        radial-gradient(circle at 100% 0%, transparent ${radius - width}px, ${color[3]} ${radius - width}px, ${color[3]} ${radius}px, transparent ${radius}px),
+        linear-gradient(to top, ${color[3]}, ${color[0]})
+    `;
+
+
+    resultBtn.style.backgroundSize = `
+        ${radius}px ${radius}px,
+        calc(100% - ${2 * radius}px) ${width}px,
+        ${radius}px ${radius}px,
+        ${width}px calc(100% - ${2 * radius}px)
+    `;
+
+    output.innerHTML = `
+        <code>
+            .button-with-gradient-border {
+                <span>
+                    <b>background-image</b>:
+                    radial-gradient(circle at 100% 100%, transparent ${radius - width}px, ${color[0]} ${radius - width}px, ${color[0]} ${radius}px, transparent ${radius}px),
+                    linear-gradient(to right, ${color[0]}, ${color[1]}),
+                    radial-gradient(circle at 0% 100%, transparent ${radius - width}px, ${color[1]} ${radius - width}px, ${color[1]} ${radius}px, transparent ${radius}px),
+                    linear-gradient(to bottom, ${color[1]}, ${color[2]}),
+                    radial-gradient(circle at 0% 0%, transparent ${radius - width}px, ${color[2]} ${radius - width}px, ${color[2]} ${radius}px, transparent ${radius}px),
+                    linear-gradient(to left, ${color[2]}, ${color[3]}),
+                    radial-gradient(circle at 100% 0%, transparent ${radius - width}px, ${color[3]} ${radius - width}px, ${color[3]} ${radius}px, transparent ${radius}px),
+                    linear-gradient(to top, ${color[3]}, ${color[0]});
+                </span>
+                <span>
+                    <b>background-size</b>:
+                    ${radius}px ${radius}px,
+                    calc(100% - ${2 * radius}px) ${width}px,
+                    ${radius}px ${radius}px,
+                    ${width}px calc(100% - ${2 * radius}px);
+                </span>
+                <span>
+                    <b>background-position</b>:
+                    top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+                </span>
+                <span>
+                    <b>background-repeat</b>:
+                    no-repeat;
+                </span>
+            }
+        </code>
+    `;
+}
