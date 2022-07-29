@@ -463,6 +463,7 @@ background-repeat: no-repeat;        display: flex;
  .bootstrap,
  .react,
  .git {
+    position: relative;
     text-align: center;
     width: 50%;
     height: 100px;
@@ -475,16 +476,120 @@ background-repeat: no-repeat;        display: flex;
     cursor: pointer;
  }
 
- .html:hover,
- .css:hover,
- .javascript:hover,
- .bootstrap:hover,
- .react:hover,
- .git:hover {
-    transform: rotate(-2deg) scale(110%);
-    opacity: 100%;
+
+
+ .html::before,
+ .html::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 4px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #E65100;
+    animation: clipMe 3s linear infinite;
  }
 
+    .html::before {
+        animation-delay: -1.5s;
+    }
+    .css::before,
+    .css::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 4px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #0277BD;
+    animation: clipMe 3s linear infinite;
+ }
+ 
+    .css::before {
+        animation-delay: -1.5s;
+    }
+
+    .javascript::before,
+    .javascript::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 4px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #FFD600
+    ;
+    animation: clipMe 3s linear infinite;
+ }
+    .javascript::before {
+        animation-delay: -1.5s;
+    }
+
+    .bootstrap::before,
+    .bootstrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 4px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #673AB7
+    ;
+    animation: clipMe 3s linear infinite;
+ }
+    .bootstrap::before {
+        animation-delay: -1.5s;
+    }
+
+    .react::before,
+    .react::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 3px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #80DEEA
+    ;
+    animation: clipMe 3s linear infinite;
+ }
+    .react::before {
+        animation-delay: -1.5s;
+    }
+
+    .git::before,
+    .git::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    margin-left: 3px;
+    margin-top: -20px;
+    box-shadow: inset 0 0 0 2px #F4511E
+    ;
+    animation: clipMe 3s linear infinite;
+ }
+    .git::before {
+        animation-delay: -1.5s;
+    }
+    @keyframes clipMe {
+        0%, 100% { clip: rect(0, 100px, 2px, 0); }
+        25% { clip: rect(0, 2px, 100px, 0); }
+        50% { clip: rect(98px, 100px, 100px, 0); }
+        75% { clip: rect(0, 100px, 100px, 98px); }
+    }
 
  .footer {
      display: flex;
