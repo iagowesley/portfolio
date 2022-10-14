@@ -99,18 +99,19 @@ body {
     margin-bottom: 50px;
 }
 
-.caixa-habilidades {
-    background-color: #012030;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
 .caixa-habilidades h3 {
     font-size: 40px;
     margin-top: 90px;
     margin-bottom: 50px;
+}
+
+@media (max-width:500px) {
+    .caixa-habilidades h3 {
+        margin-top: 150px;
+        margin-bottom: 10px;
+
+    }
 }
 
 .caixa3 h3 {
@@ -567,10 +568,14 @@ body {
 
 
 .area{
-    background: #4e54c8;  
+    background: #4e54c8; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
-    height:100vh;
+    height:110vh;
 }
 
 .circles{
